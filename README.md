@@ -1,31 +1,43 @@
-# Teste Econverse: Vaga Desenvolvedor Front-End
+# Econverse — Teste Front-End Júnior
 
-### Vem ser #Econverse!
+Vitrine de produtos desenvolvida com React, TypeScript e SCSS.
 
-Segue abaixo as instruções para a execução do teste.
+## Tecnologias
+- React 18 + TypeScript
+- Vite
+- SCSS (Sass) como pré-processador CSS
 
-## Instruções
-- Faça um fork desse projeto para a sua conta pessoal do GitHub.
-- Desenvolva a página conforme as **Especificações Técnicas** 
-- Crie um README com as instruções para compilar, testar e rodar o projeto.
-- O link do repositório deverá ser enviado para o e-mail julia.gardiano@econverse.com.br com o título **Teste Vaga FrontEnd**
+## Como rodar
 
-## Especificações Técnicas
-- Desenvolver a pagina em React e TypeScript conforme o [layout](https://www.figma.com/file/rWnzPeoxgynuNPsJjV0VmV/Teste-Front-End-Jr?node-id=0%3A1). Para conseguir pegar os elementos do Figma, basta copiar o layout para sua conta que terá acesso de edição.
-- Montar a [vitrine](https://app.econverse.com.br/teste-front-end/junior/tecnologia/layout/vitrine-produtos.png) de produtos consumindo as informações dos produtos em json atraves desse [Link](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json).
-- Desenvolver a interação ao clicar em um produto conforme layout. A interação consiste em abrir um modal com as principais informações do produto presente no arquivo [JSON](https://app.econverse.com.br/teste-front-end/junior/tecnologia/lista-produtos/produtos.json) conforme o produto que clicar.
-- Utilizar Pré-processador Sass, Less ou Stylus.
-- Respeitar o Layout pixel a pixel, tamanho das fontes, cores e botões.
-- Não Utilizar bibliotecas UI como Bootstrap, Foundation, ou afins.
+### Pré-requisitos
+- Node.js >= 18
 
-## Pontos Extras
-- Utilizar Boas práticas de SEO
-- Uso de HTML semântico
+### Instalação
+```bash
+npm install
+```
 
-## O que avaliaremos em seu teste
-- Organização do projeto
-- Lógica do código
-- Componentização
-- Alcance dos objetivos propostos
+### Desenvolvimento
+```bash
+npm run dev
+```
+Acesse http://localhost:5173
 
-**Boa sorte! ;)**
+### Build para produção
+```bash
+npm run build
+npm run preview
+```
+
+## Funcionalidades
+- Vitrine consumindo API JSON externa
+- Modal ao clicar no produto com seletor de quantidade
+- Skeleton loader durante carregamento
+- Layout responsivo mobile-first
+- HTML semântico e acessibilidade (ARIA, teclado)
+- SEO: meta tags, lang, heading hierarchy
+
+## Decisões técnicas
+- **SCSS global** em arquivo único para manter consistência e reutilizar variáveis em todos os componentes
+- **Custom hook `useProducts`** para isolar a lógica de fetch e separar responsabilidades
+- **Sem bibliotecas de UI** — todos os componentes são escritos do zero conforme exigido
